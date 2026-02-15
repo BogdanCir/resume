@@ -5,7 +5,7 @@
     "tagline": "",
     "heroCtaText": "View My Work",
     "heroCtaLink": "/projects",
-    "bio": "Computer Science graduate and AWS Certified Solutions Architect Associate. Working knowledge of Java, Spring Boot, Python, SQL, and React. Hands-on exposure with AWS services including S3, CloudFront, Route53, DynamoDB, Elastic Beanstalk, Lambda, and API Gateway, as well as CI/CD workflows and Git. Seeking entry-level positions in software development, with a particular interest in DevOps, cloud engineering, and AWS. Currently learning Terraform, Docker, and Kubernetes.",
+    "bio": "Computer Science graduate and AWS Certified Solutions Architect Associate. Working knowledge of Java, Spring Boot, Python, SQL, and React. Hands-on exposure with AWS services including S3, CloudFront, Route53, DynamoDB, Elastic Beanstalk, Lambda, and API Gateway, as well as CI/CD workflows and Git. Seeking entry-level positions in software development, with a particular interest in DevOps, cloud engineering, and AWS. Currently learning Docker and Kubernetes.",
     "profileImage": "/images/profile.png",
     "resumeUrl": "/resume.pdf",
     "email": "bogdancirciu1@gmailcom",
@@ -14,11 +14,11 @@
   },
 
   "skills": [
+    { "name": "AWS" },
     { "name": "Java" },
     { "name": "Spring Boot" },
     { "name": "SQL" },
     { "name": "Python" },
-    { "name": "AWS" },
     { "name": "React" },
     { "name": "TailwindCSS" },
     { "name": "Figma" }
@@ -29,31 +29,31 @@
       "id": 1,
       "title": "E-Commerce Platform",
       "description": "A full-stack e-commerce platform with real-time inventory management, payment processing, and an admin dashboard.",
-      "tags": ["React", "Node.js", "PostgreSQL", "Stripe"],
+      "tags": ["Java", "Spring Boot", "Spring Security", "Stripe", "React", "MySQL"],
       "liveUrl": "https://example.com",
       "githubUrl": "https://github.com/example/ecommerce"
     },
     {
       "id": 2,
-      "title": "Task Management App",
-      "description": "A collaborative task management tool with drag-and-drop boards, real-time updates, and team workspaces.",
-      "tags": ["React", "Firebase", "Tailwind CSS"],
+      "title": "Portfolio Web Page",
+      "description": "My personal portfolio web page with React and TailwindCSS",
+      "tags": ["React", "Tailwind CSS", "S3", "CloudFront", "Route53", "API Gateway", "Lambda", "DynamoDB"],
       "liveUrl": "",
-      "githubUrl": "https://github.com/example/taskmanager"
+      "githubUrl": "https://github.com/BogdanCir/resume.git"
     },
     {
       "id": 3,
       "title": "Client Appointment Tracker",
       "description": "A Java application designed with a flexible architecture supporting multiple data storage backends (text files, binary files, SQL database), runtime configurability, and comprehensive CRUD operations for Patient and Appointment entities with real-world constraints like non-overlapping appointments. Includes dual user interfaces: a JavaFX GUI and a CLI.",
-      "tags": ["Java", "JavaFX", "CLI"],
+      "tags": ["Java", "JavaFX"],
       "liveUrl": "",
       "githubUrl": "https://github.com/BogdanCir/Client-Appointment-Tracker.git"
     },
     {
       "id": 4,
       "title": "Library Management System",
-      "description": "A robust Python-based Library Management System with a layered architecture for efficient handling of book and client records. Features include unit tests for reliability and user-friendly book rental and return functionality.",
-      "tags": ["Python", "Unit Testing", "Library Management"],
+      "description": "A Python-based Library Management System with a layered architecture for efficient handling of book and client records. Features include unit tests for reliability and user-friendly book rental and return functionality.",
+      "tags": ["Python", "Unit Testing"],
       "liveUrl": "",
       "githubUrl": "https://github.com/BogdanCir/python-project1.git"
     }
