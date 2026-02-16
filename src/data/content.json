@@ -5,7 +5,7 @@
     "tagline": "",
     "heroCtaText": "View My Work",
     "heroCtaLink": "/projects",
-    "bio": "Computer Science graduate and AWS Certified Solutions Architect Associate. Working knowledge of Java, Spring Boot, Python, SQL, and React. Hands-on exposure with AWS services including S3, CloudFront, Route53, DynamoDB, Elastic Beanstalk, Lambda, and API Gateway, as well as CI/CD workflows and Git. Seeking entry-level positions in software development, with a particular interest in DevOps, cloud engineering, and AWS. Currently learning Docker and Kubernetes.",
+    "bio": "Computer Science graduate and AWS Certified Solutions Architect Associate. Working knowledge of Java, Spring Boot, AWS, Python, SQL, and React. Seeking entry-level positions in software development, with a particular interest in DevOps, cloud engineering, and AWS. Currently learning Docker and Kubernetes.",
     "profileImage": "/images/profile.png",
     "resumeUrl": "/resume.pdf",
     "email": "bogdancirciu1@gmailcom",
@@ -14,10 +14,20 @@
   },
 
   "skills": [
-    { "name": "AWS" },
     { "name": "Java" },
     { "name": "Spring Boot" },
+    { "name": "Spring Security" },
     { "name": "SQL" },
+    { "name": "AWS S3" },
+    { "name": "CloudFront" },
+    { "name": "Route53" },
+    { "name": "API Gateway" },
+    { "name": "Lambda" },
+    { "name": "DynamoDB" },
+    { "name": "RDS" },
+    { "name": "IAM" },
+    { "name": "CI/CD" },
+    { "name": "Git" },
     { "name": "Python" },
     { "name": "React" },
     { "name": "TailwindCSS" },
@@ -28,17 +38,17 @@
     {
       "id": 1,
       "title": "E-Commerce Platform",
-      "description": "A full-stack e-commerce platform with real-time inventory management, payment processing, and an admin dashboard.",
+      "description": "Designed and built a full stack E-commerce that manages users, products, and orders. Integrated Stripe for payment processing and developed security system (JWT) to ensure safe user authentication.",
       "tags": ["Java", "Spring Boot", "Spring Security", "Stripe", "React", "MySQL"],
-      "liveUrl": "https://example.com",
-      "githubUrl": "https://github.com/example/ecommerce"
+      "liveUrl": "",
+      "githubUrl": "https://github.com/BogdanCir/spring-api-project.git"
     },
     {
       "id": 2,
       "title": "Portfolio Web Page",
-      "description": "My personal portfolio web page with React and TailwindCSS",
-      "tags": ["React", "Tailwind CSS", "S3", "CloudFront", "Route53", "API Gateway", "Lambda", "DynamoDB"],
-      "liveUrl": "",
+      "description": " personal resume website built with React + Vite and deployed using a fully serverless AWS architecture.",
+      "tags": ["React", "TailwindCSS", "S3", "CloudFront", "Route53", "API Gateway", "Lambda", "DynamoDB", "Github Actions"],
+      "liveUrl": "https://resume.bogdan-circiu.com",
       "githubUrl": "https://github.com/BogdanCir/resume.git"
     },
     {

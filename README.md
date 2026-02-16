@@ -22,12 +22,9 @@ The application is deployed using:
   - Automated build & deploy to S3
   - Automatic CloudFront cache invalidation
 
-
 ## Architecture Diagram
 
 <img width="1632" height="472" alt="diagram-export-2-16-2026-3_12_04-AM" src="https://github.com/user-attachments/assets/ab399e46-a1a9-4588-be00-f0743d6bf36a" />
-
-
 
 ## Security
 
@@ -35,16 +32,16 @@ The application is deployed using:
 - Access controlled via CloudFront Origin Access Control (OAC)
 - HTTPS enforced via ACM SSL certificate
 - IAM least-privilege permissions for deployment
-  
-
 
 ## Tech Stack
 
 **Frontend**
+
 - React + Vite
 - TailwindCSS
 
 **Cloud / Backend**
+
 - AWS S3
 - CloudFront
 - Route 53

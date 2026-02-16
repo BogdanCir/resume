@@ -35,10 +35,10 @@ export default function AboutSection() {
               {personal.bio}
             </p>
 
-            {/* <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Skills & Technologies
-            </h3> */}
-            {/* <div className="flex flex-wrap gap-3">
+            </h3>
+            <div className="flex flex-wrap gap-3">
               {skills.map((skill) => (
                 <span
                   key={skill.name}
@@ -47,7 +47,7 @@ export default function AboutSection() {
                   {skill.name}
                 </span>
               ))}
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
