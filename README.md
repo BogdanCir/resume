@@ -1,20 +1,55 @@
-<<<<<<< HEAD
-# resume
-=======
-# React + Vite
+A personal resume website built with React + Vite and deployed using a fully serverless AWS architecture.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live: https://resume.bogdan-circiu.com
 
-Currently, two official plugins are available:
+## Architecture Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The application is deployed using:
 
-## React Compiler
+- **Frontend**
+  - React + Vite
+  - Static assets stored in private Amazon S3
+  - Distributed globally via CloudFront (with Origin Access Control)
+  - DNS & SSL managed with Route 53 and ACM
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Backend (Visitor Counter API)**
+  - API Gateway
+  - AWS Lambda (python)
+  - DynamoDB (visitor count storage)
 
-## Expanding the ESLint configuration
+- **CI/CD**
+  - GitHub Actions
+  - Automated build & deploy to S3
+  - Automatic CloudFront cache invalidation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> 3178675 (resume v1)
+
+## Architecture Diagram
+
+<img width="1632" height="472" alt="diagram-export-2-16-2026-3_12_04-AM" src="https://github.com/user-attachments/assets/ab399e46-a1a9-4588-be00-f0743d6bf36a" />
+
+
+
+## Security
+
+- S3 bucket is private
+- Access controlled via CloudFront Origin Access Control (OAC)
+- HTTPS enforced via ACM SSL certificate
+- IAM least-privilege permissions for deployment
+  
+
+
+## Tech Stack
+
+**Frontend**
+- React + Vite
+- TailwindCSS
+
+**Cloud / Backend**
+- AWS S3
+- CloudFront
+- Route 53
+- ACM
+- API Gateway
+- AWS Lambda
+- DynamoDB
+- IAM
