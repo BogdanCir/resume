@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 repomix-output.xml
-
+*.claude
 
 # Editor directories and files
 .vscode/*

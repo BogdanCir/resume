@@ -11,9 +11,9 @@ export default function Articles() {
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Articles
           </h1>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          {/* <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             I write about software engineering, and things I learn along the way.
-          </p>
+          </p> */}
         </div>
 
         {articles.length > 0 ? (
@@ -40,9 +40,8 @@ export default function Articles() {
             <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2">
               Articles coming soon
             </h2>
-            <p className="text-gray-500 dark:text-gray-400">
-              Stay tuned — I&apos;m working on some posts about cloud engineering, AWS, and DevOps.
-            </p>
+            {/* <p className="text-gray-500 dark:text-gray-400">
+            </p> */}
           </div>
         )}
       </div>

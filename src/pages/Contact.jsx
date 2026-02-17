@@ -12,9 +12,9 @@ export default function Contact() {
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Get in Touch
           </h1>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          {/* <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Whether it&apos;s about a role, a collaboration, or just to connect — I&apos;d love to hear from you.
-          </p>
+          </p> */}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

@@ -40,7 +40,7 @@
       "title": "E-Commerce Platform",
       "description": "Designed and built a full stack E-commerce that manages users, products, and orders. Integrated Stripe for payment processing and developed security system (JWT) to ensure safe user authentication.",
       "tags": ["Java", "Spring Boot", "Spring Security", "Stripe", "React", "MySQL"],
-      "liveUrl": "",
+      "liveUrl": "https://drmao84oyz3a6.cloudfront.net/",
       "githubUrl": "https://github.com/BogdanCir/spring-api-project.git"
     },
     {
@@ -69,7 +69,17 @@
     }
   ],
 
-  "articles": [],
+  "articles": [
+    {
+      "id": 1,
+      "title": "Deploying a Full-Stack Application on AWS with Elastic Beanstalk, RDS, S3, and CloudFront",
+      "excerpt": "A step-by-step guide to deploying a full-stack application on AWS using Elastic Beanstalk for the backend, RDS for the database, S3 for static assets, and CloudFront as a CDN.",
+      "date": "2025-01-01",
+      "readTime": "6 min read",
+      "url": "https://medium.com/@bogdancirciu1/deploying-a-full-stack-application-on-aws-with-elastic-beanstalk-rds-s3-and-cloudfront-457228f74d37",
+      "tags": ["AWS", "Elastic Beanstalk", "RDS", "S3", "CloudFront"]
+    }
+  ],
 
   "social": {
     "github": "https://github.com/BogdanCir",
