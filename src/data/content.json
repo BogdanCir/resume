@@ -5,9 +5,10 @@
     "tagline": "",
     "heroCtaText": "View My Work",
     "heroCtaLink": "/projects",
-    "bio": "Computer Science graduate and AWS Certified Solutions Architect Associate. Working knowledge of Java, Spring Boot, AWS, Python, SQL, and React. Seeking entry-level positions in software development, with a particular interest in DevOps, cloud engineering, and AWS. Currently learning Docker and Kubernetes.",
+    "bio": "Computer Science graduate and AWS certified. Working knowledge of Java, Spring Boot, AWS, Python, SQL, and React. Seeking positions in software development, with a particular interest cloud and backend development. Currently expanding my skill with Docker and Kubernetes.",
+    "certificationUrl": "https://www.credly.com/badges/2a8588df-cb23-44f5-b362-789de6f422fc/public_url",
     "profileImage": "/images/profile.png",
-    "resumeUrl": "/resume.pdf",
+    "resumeUrl": "/images/CV - Bogdan Circiu.pdf",
     "email": "bogdancirciu1@gmailcom",
     "location": "",
     "visitorCounterApi": "https://2468yb7k4l.execute-api.eu-north-1.amazonaws.com/count"
@@ -39,15 +40,15 @@
       "id": 1,
       "title": "E-Commerce Platform",
       "description": "Designed and built a full stack E-commerce that manages users, products, and orders. Integrated Stripe for payment processing and developed security system (JWT) to ensure safe user authentication.",
-      "tags": ["Java", "Spring Boot", "Spring Security", "Stripe", "React", "MySQL"],
+      "tags": ["Java", "Spring Boot", "Spring Security", "Stripe", "React", "MySQL", "Elastic Beanstalk", "CloudFront", "S3", "RDS", "React", "Tailwind CSS"],
       "liveUrl": "https://drmao84oyz3a6.cloudfront.net/",
       "githubUrl": "https://github.com/BogdanCir/spring-api-project.git"
     },
     {
       "id": 2,
       "title": "Portfolio Web Page",
-      "description": " personal resume website built with React + Vite and deployed using a fully serverless AWS architecture.",
-      "tags": ["React", "TailwindCSS", "S3", "CloudFront", "Route53", "API Gateway", "Lambda", "DynamoDB", "Github Actions"],
+      "description": "Personal resume website built with React + Tailwind CSS and deployed using a fully serverless AWS architecture.",
+      "tags": ["React", "Tailwind CSS", "S3", "CloudFront", "Route53", "API Gateway", "Lambda", "DynamoDB", "Github Actions"],
       "liveUrl": "https://resume.bogdan-circiu.com",
       "githubUrl": "https://github.com/BogdanCir/resume.git"
     },
@@ -82,8 +83,7 @@
   ],
 
   "social": {
-    "github": "https://github.com/BogdanCir",
-    "linkedin": "https://www.linkedin.com/in/bogdan-circiu-a80a73215/"
+    "github": "https://github.com/BogdanCir"
   },
 
   "emailjs": {
