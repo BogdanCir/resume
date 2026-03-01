@@ -1,22 +1,46 @@
-name: Upload website to S3
+name: Deploy to AWS
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - run: npm ci
+      - name: AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
 
+      # Docker build & push to ECR
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build and push images
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          APP_VERSION: "1.0.0"
+        run: |
+          # Frontend
+          docker build -f Dockerfile.prod -t $ECR_REGISTRY/bogdan-resume-frontend:$APP_VERSION .
+          docker push $ECR_REGISTRY/bogdan-resume-frontend:$APP_VERSION
+
+          # Backend
+          docker build -f aws/lambda/Dockerfile -t $ECR_REGISTRY/bogdan-resume-backend:$APP_VERSION aws/lambda/
+          docker push $ECR_REGISTRY/bogdan-resume-backend:$APP_VERSION
+
+      # S3 site deploy
+      - run: npm ci
       - run: npm run build
 
       - uses: jakejarvis/s3-sync-action@master
@@ -29,11 +53,48 @@ jobs:
           AWS_REGION: ${{ secrets.AWS_REGION }}
           SOURCE_DIR: "dist"
 
-      - env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: ${{secrets.AWS_REGION}}
+      - name: Invalidate CloudFront
         run: |
           aws cloudfront create-invalidation \
             --distribution-id EC4FIZNB312S4 \
             --paths "/*"
+
+# name:upload website to S3
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+
+#       - uses: actions/setup-node@v3
+#         with:
+#           node-version: 20
+
+#       - run: npm ci
+
+#       - run: npm run build
+
+#       - uses: jakejarvis/s3-sync-action@master
+#         with:
+#           args: --delete --exact-timestamps
+#         env:
+#           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+#           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#           AWS_REGION: ${{ secrets.AWS_REGION }}
+#           SOURCE_DIR: "dist"
+
+#       - env:
+#           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#           AWS_REGION: ${{secrets.AWS_REGION}}
+#         run: |
+#           aws cloudfront create-invalidation \
+#             --distribution-id EC4FIZNB312S4 \
+#             --paths "/*"

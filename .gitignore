@@ -12,8 +12,9 @@ dist
 dist-ssr
 *.local
 repomix-output.xml
+DOCKER_SETUP.md
 .claude/
-
+text.md
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

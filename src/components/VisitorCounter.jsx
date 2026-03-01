@@ -9,13 +9,30 @@ export default function VisitorCounter() {
     if (hasFetched.current) return;
     hasFetched.current = true;
 
-    const apiUrl = content.personal.visitorCounterApi;
+    const localUrl = import.meta.env.VITE_VISITOR_API_URL;
+    const apiUrl = localUrl || content.personal.visitorCounterApi;
     if (!apiUrl || apiUrl.startsWith("YOUR_")) return;
 
-    fetch(apiUrl)
+    // lambda emulator waits for a POST type request
+    const fetchOptions = localUrl
+      ? { method: "POST", body: JSON.stringify({}) } //for the Lambda emulator
+      : {}; // for the real AWS 
+
+    fetch(apiUrl, fetchOptions)
       .then((res) => res.json())
-      .then((data) => setCount(data.count))
+      .then((data) => {
+        const count = data.body ? JSON.parse(data.body).count : data.count;
+        setCount(count);
+      })
       .catch(() => {});
+
+  //   const apiUrl = content.personal.visitorCounterApi;
+  //   if (!apiUrl || apiUrl.startsWith("YOUR_")) return;
+
+  //   fetch(apiUrl)
+  //     .then((res) => res.json())
+  //     .then((data) => setCount(data.count))
+  //     .catch(() => {});
   }, []);
 
   if (count === null) return null;

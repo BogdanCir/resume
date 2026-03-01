@@ -1,7 +1,19 @@
 import json
 import boto3
+import os
 
-table = boto3.resource("dynamodb").Table("bogdan-resume-visitors")
+# verificam daca exista env in Docker
+endpoint = os.getenv("DYNAMODB_ENDPOINT_URL")
+if endpoint:
+    # in Docker
+    dynamodb = boto3.resource("dynamodb", endpoint_url=endpoint)
+else:
+    # in AWS
+    dynamodb = boto3.resource("dynamodb")
+
+table = dynamodb.Table("bogdan-resume-visitors")
+
+# table = boto3.resource("dynamodb").Table("bogdan-resume-visitors")
 
 def lambda_handler(event, context):
     # Get current views, add 1, save it back
