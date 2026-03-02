@@ -5,7 +5,7 @@
     "tagline": "",
     "heroCtaText": "View My Work",
     "heroCtaLink": "/projects",
-    "bio": "Computer Science graduate and AWS certified. Working knowledge of Java, Spring Boot, AWS, Python, SQL, and React. Seeking positions in software development, with a particular interest in cloud and backend development.",
+    "bio": "AWS Certified Solutions Architect - Associate with a BSc in Computer Science and hands-on experience building, deploying, and managing cloud-based environments on AWS. Seeking software development roles with a particular interest in cloud and backend development.",
     "certificationUrl": "https://www.credly.com/badges/2a8588df-cb23-44f5-b362-789de6f422fc/public_url",
     "profileImage": "/images/profile.png",
     "resumeUrl": "/images/CV - Bogdan Circiu.pdf",
@@ -27,15 +27,14 @@
     { "name": "DynamoDB" },
     { "name": "RDS" },
     { "name": "IAM" },
+    { "name": "ECR" },
     { "name": "Terraform" },
     { "name": "CI/CD" },
     { "name": "Docker" },
     { "name": "Kubernetes" },
     { "name": "Git" },
     { "name": "Python" },
-    { "name": "React" },
-    { "name": "TailwindCSS" },
-    { "name": "Figma" }
+    { "name": "React" }
   ],
 
   "projects": [
@@ -78,7 +77,7 @@
       "id": 1,
       "title": "Deploying a Full-Stack Application on AWS with Elastic Beanstalk, RDS, S3, and CloudFront",
       "excerpt": "A step-by-step guide to deploying a full-stack application on AWS using Elastic Beanstalk for the backend, RDS for the database, S3 for static assets, and CloudFront as a CDN.",
-      "date": "2025-01-01",
+      "date": "2026-02-17",
       "readTime": "6 min read",
       "url": "https://medium.com/@bogdancirciu1/deploying-a-full-stack-application-on-aws-with-elastic-beanstalk-rds-s3-and-cloudfront-457228f74d37",
       "tags": ["AWS", "Elastic Beanstalk", "RDS", "S3", "CloudFront"]
